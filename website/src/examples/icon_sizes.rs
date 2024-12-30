@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::elements::{BBlock, BIcon, BIconText};
 use leptos_bulma::enums::BSize;
 use leptos_bulma::icons::icondata_fa;

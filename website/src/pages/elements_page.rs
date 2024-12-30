@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::elements::{BAButton, BBlock, BTitle};
 use leptos_bulma::layout::BSection;
 

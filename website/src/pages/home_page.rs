@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 use crate::components::PageTitle;
 use crate::i18n::{t, use_i18n};

@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::components::{BModal, BModalContent};
 use leptos_bulma::elements::BBox;
 

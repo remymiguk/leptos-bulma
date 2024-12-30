@@ -1,5 +1,5 @@
 use leptos::html::{Div, A};
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 #[component]
 pub fn BNavbar(children: Children, #[prop(optional, into)] class: TextProp) -> impl IntoView {

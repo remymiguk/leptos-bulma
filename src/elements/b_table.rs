@@ -1,6 +1,6 @@
 use std::hash::Hash;
 
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 #[component]
 pub fn BTable(#[prop(optional, into)] class: TextProp, children: Children) -> impl IntoView {

@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 use crate::components::{GoToBulmaIo, GoToDocsRs, PageTitle};
 use crate::examples::{BasicColumns, RustCodeExample};

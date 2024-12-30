@@ -1,5 +1,5 @@
 use leptos::html::Code;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::elements::BBlock;
 use leptos_meta::Title;
 use wasm_bindgen::{prelude::wasm_bindgen, JsCast};

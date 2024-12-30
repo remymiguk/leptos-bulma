@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 #[component]
 pub fn BSection(children: Children, #[prop(optional, into)] class: TextProp) -> impl IntoView {

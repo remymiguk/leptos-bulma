@@ -1,5 +1,5 @@
 use leptos::html::Input;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use web_sys::{Event, MouseEvent};
 
 use crate::EventFn;

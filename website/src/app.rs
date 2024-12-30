@@ -1,5 +1,5 @@
 use codee::string::FromToStringCodec;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_i18n::Locale;
 use leptos_meta::*;
 use leptos_router::*;

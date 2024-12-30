@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 mod b_checkbox;
 mod b_checkbox_field;

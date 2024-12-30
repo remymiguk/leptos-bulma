@@ -1,5 +1,5 @@
 use leptos::ev::MouseEvent;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 #[component]
 pub fn BModal(

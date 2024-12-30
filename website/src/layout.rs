@@ -1,5 +1,5 @@
 use icondata_core::IconData;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::columns::{BColumn, BColumns};
 use leptos_bulma::components::{
     BDropdown, BDropdownItem, BNavbar, BNavbarBrand, BNavbarBurger, BNavbarEnd, BNavbarItem,

@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::{
     columns::{BColumn, BColumns},
     elements::BBox,

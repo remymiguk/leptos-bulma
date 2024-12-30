@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 use super::{BControl, BField, BHelp, BLabel};
 

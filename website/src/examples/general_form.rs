@@ -1,6 +1,6 @@
 use leptos::ev::SubmitEvent;
 use leptos::html::{Input, Select};
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::elements::BButton;
 use leptos_bulma::form::{
     BCheckboxField, BFile, BPasswordField, BSelectField, BTextField, BTextareaField,

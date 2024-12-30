@@ -1,5 +1,5 @@
 use leptos::html::Div;
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 
 use crate::elements::BButton;
 

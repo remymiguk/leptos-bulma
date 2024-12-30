@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{prelude::*, text_prop::TextProp};
 use leptos_bulma::elements::{BTag, BTags};
 use leptos_bulma::enums::{BColor, BSize};
 
