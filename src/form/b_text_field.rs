@@ -8,13 +8,13 @@ use crate::EventFn;
 #[component]
 pub fn BTextField(
     #[prop(optional)] node_ref: NodeRef<leptos::html::Input>,
-    #[prop(optional, into)] error: MaybeSignal<Option<String>>,
+    #[prop(optional, into)] error: MaybeProp<Option<String>>,
     #[prop(optional, into)] id: Option<&'static str>,
     #[prop(default = "text")] input_type: &'static str,
     #[prop(optional)] label: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
     #[prop(optional)] placeholder: Option<&'static str>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(optional, into)] on_change: Option<EventFn>,
     #[prop(optional, into)] on_input: Option<EventFn>,
     #[prop(optional, into)] addon_left: Option<ViewFn>,

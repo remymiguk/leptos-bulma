@@ -48,9 +48,9 @@ pub fn BNavbarEnd(children: Children, #[prop(optional, into)] class: TextProp) -
 pub fn BNavbarItem(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(optional, into)] href: Option<TextProp>,
-    #[prop(optional, into)] target: Option<TextProp>,
-    #[prop(optional, into)] title: Option<TextProp>,
+    #[prop(optional, into)] href: MaybeProp<TextProp>,
+    #[prop(optional, into)] target: MaybeProp<TextProp>,
+    #[prop(optional, into)] title: MaybeProp<TextProp>,
 ) -> impl IntoView {
     view! {
         <a class=format!("navbar-item {}", class.get()) href=href target=target title=title>
@@ -63,8 +63,8 @@ pub fn BNavbarItem(
 pub fn BNavbarItemDropdown<F, IV>(
     children: Children,
     #[prop(optional, into)] dropdown_class: TextProp,
-    #[prop(optional, into)] href: Option<TextProp>,
-    #[prop(optional, into)] is_hoverable: MaybeSignal<bool>,
+    #[prop(optional, into)] href: MaybeProp<TextProp>,
+    #[prop(optional, into)] is_hoverable: MaybeProp<bool>,
     trigger: F,
 ) -> impl IntoView
 where
@@ -107,7 +107,7 @@ where
 pub fn BNavbarMenu(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(optional, into)] is_active: Option<MaybeSignal<bool>>,
+    #[prop(optional, into)] is_active: Option<MaybeProp<bool>>,
 ) -> impl IntoView {
     view! {
         <div

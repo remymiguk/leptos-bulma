@@ -7,12 +7,12 @@ use super::{BCheckbox, BCheckboxProps, BControl, BField, BHelp};
 #[component]
 pub fn BCheckboxField(
     #[prop(optional)] node_ref: NodeRef<leptos::html::Input>,
-    #[prop(optional, into)] error: MaybeSignal<Option<String>>,
+    #[prop(optional, into)] error: MaybeProp<Option<String>>,
     #[prop(optional, into)] id: Option<&'static str>,
     label: &'static str,
     #[prop(optional, into)] name: Option<&'static str>,
-    #[prop(default = "true".into(), into)] value: MaybeSignal<String>,
-    #[prop(optional, into)] is_checked: MaybeSignal<bool>,
+    #[prop(default = "true".into(), into)] value: MaybeProp<String>,
+    #[prop(optional, into)] is_checked: MaybeProp<bool>,
     #[prop(optional, into)] on_change: Option<EventFn>,
 ) -> impl IntoView {
     let error_text = create_rw_signal(None);

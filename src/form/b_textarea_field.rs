@@ -4,12 +4,12 @@ use super::{BControl, BField, BHelp, BLabel};
 
 #[component]
 pub fn BTextareaField(
-    #[prop(optional, into)] error: MaybeSignal<Option<String>>,
+    #[prop(optional, into)] error: MaybeProp<Option<String>>,
     #[prop(optional)] id: Option<&'static str>,
     #[prop(optional)] label: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
     #[prop(optional)] placeholder: Option<&'static str>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] value: MaybeProp<String>,
 ) -> impl IntoView {
     let error_text = create_rw_signal(None);
 

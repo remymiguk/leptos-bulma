@@ -8,12 +8,12 @@ use super::{BControl, BField, BHelp, BLabel};
 #[component]
 pub fn BSelectField(
     #[prop(optional)] node_ref: NodeRef<leptos::html::Select>,
-    #[prop(optional, into)] error: MaybeSignal<Option<String>>,
+    #[prop(optional, into)] error: MaybeProp<Option<String>>,
     #[prop(optional, into)] id: Option<&'static str>,
     #[prop(optional)] label: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
-    #[prop(optional, into)] options: MaybeSignal<Vec<(String, String)>>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] options: MaybeProp<Vec<(String, String)>>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(optional, into)] on_change: Option<EventFn>,
 ) -> impl IntoView {
     let error_text = create_rw_signal(None);

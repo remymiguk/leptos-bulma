@@ -6,8 +6,8 @@ pub fn BSelect(
     #[prop(optional)] node_ref: NodeRef<leptos::html::Select>,
     #[prop(optional)] id: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
-    #[prop(optional, into)] options: MaybeSignal<Vec<(String, String)>>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] options: MaybeProp<Vec<(String, String)>>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(attrs, optional)] attributes: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView {
     let options_view = move || {

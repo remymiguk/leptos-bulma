@@ -7,9 +7,9 @@ use crate::elements::BButton;
 pub fn BDropdown<F, IV>(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(optional, into)] is_right: MaybeSignal<bool>,
-    #[prop(optional, into)] is_up: MaybeSignal<bool>,
-    #[prop(optional, into)] is_hoverable: MaybeSignal<bool>,
+    #[prop(optional, into)] is_right: MaybeProp<bool>,
+    #[prop(optional, into)] is_up: MaybeProp<bool>,
+    #[prop(optional, into)] is_hoverable: MaybeProp<bool>,
     trigger: F,
 ) -> impl IntoView
 where
@@ -60,7 +60,7 @@ pub fn BDropdownDivider() -> impl IntoView {
 pub fn BDropdownItem(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(optional)] href: Option<&'static str>,
+    #[prop(optional)] href: MaybeProp<&'static str>,
 ) -> impl IntoView
 where
 {

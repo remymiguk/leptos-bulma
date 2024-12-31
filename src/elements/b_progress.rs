@@ -6,9 +6,9 @@ use crate::enums::{BColor, BSize};
 pub fn BProgress(
     #[prop(optional)] children: Option<Children>,
     #[prop(optional, into)] class: TextProp,
-    #[prop(default = BColor::Default.into(), into)] color: MaybeSignal<BColor>,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(into)] max: MaybeSignal<usize>,
+    #[prop(default = BColor::Default.into(), into)] color: MaybeProp<BColor>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(into)] max: MaybeProp<usize>,
     #[prop(optional, into)] value: MaybeProp<usize>,
 ) -> impl IntoView {
     let mut class_list = "progress".to_owned();

@@ -4,7 +4,7 @@ use leptos_router::use_location;
 #[component]
 pub fn BPagination(
     #[prop(optional, into)] class: TextProp,
-    #[prop(into)] count: MaybeSignal<i16>,
+    #[prop(into)] count: MaybeProp<i16>,
     #[prop(default = 3)] list_size: i16,
 ) -> impl IntoView {
     let location = use_location();

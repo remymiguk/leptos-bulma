@@ -7,8 +7,8 @@ pub fn BNotification(
     children: ChildrenFn,
     #[prop(optional, into)] class: TextProp,
 
-    #[prop(default = BColor::Default.into(), into)] color: MaybeSignal<BColor>,
-    #[prop(optional, into)] is_light: MaybeSignal<bool>,
+    #[prop(default = BColor::Default.into(), into)] color: MaybeProp<BColor>,
+    #[prop(optional, into)] is_light: MaybeProp<bool>,
     #[prop(into)] is_active: RwSignal<bool>,
 ) -> impl IntoView {
     let class_list = move || {

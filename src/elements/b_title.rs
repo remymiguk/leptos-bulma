@@ -4,7 +4,7 @@ use leptos::{prelude::*, text_prop::TextProp};
 pub fn BTitle(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(optional, into)] id: Option<TextProp>,
+    #[prop(optional, into)] id: MaybeProp<TextProp>,
     #[prop(optional)] is: Option<i8>,
 ) -> impl IntoView {
     let title_class = move || {

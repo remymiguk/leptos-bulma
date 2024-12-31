@@ -63,19 +63,19 @@ fn get_button_class_list(
 pub fn BAButton(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(default = BColor::Default.into(), into)] color: MaybeSignal<BColor>,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(default = BState::Default.into(), into)] state: MaybeSignal<BState>,
-    #[prop(optional, into)] is_dark: MaybeSignal<bool>,
-    #[prop(optional, into)] is_fullwidth: MaybeSignal<bool>,
-    #[prop(optional, into)] is_inverted: MaybeSignal<bool>,
-    #[prop(optional, into)] is_light: MaybeSignal<bool>,
-    #[prop(optional, into)] is_outlined: MaybeSignal<bool>,
-    #[prop(optional, into)] is_responsive: MaybeSignal<bool>,
-    #[prop(optional, into)] is_rounded: MaybeSignal<bool>,
-    #[prop(optional, into)] href: Option<TextProp>,
-    #[prop(optional, into)] target: Option<TextProp>,
-    #[prop(optional, into)] title: Option<TextProp>,
+    #[prop(default = BColor::Default.into(), into)] color: MaybeProp<BColor>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(default = BState::Default.into(), into)] state: MaybeProp<BState>,
+    #[prop(optional, into)] is_dark: MaybeProp<bool>,
+    #[prop(optional, into)] is_fullwidth: MaybeProp<bool>,
+    #[prop(optional, into)] is_inverted: MaybeProp<bool>,
+    #[prop(optional, into)] is_light: MaybeProp<bool>,
+    #[prop(optional, into)] is_outlined: MaybeProp<bool>,
+    #[prop(optional, into)] is_responsive: MaybeProp<bool>,
+    #[prop(optional, into)] is_rounded: MaybeProp<bool>,
+    #[prop(optional, into)] href: MaybeProp<TextProp>,
+    #[prop(optional, into)] target: MaybeProp<TextProp>,
+    #[prop(optional, into)] title: MaybeProp<TextProp>,
 ) -> impl IntoView {
     let button_class_list = move || {
         get_button_class_list(
@@ -105,17 +105,17 @@ pub fn BButton(
     #[prop(optional, into)] button_type: Option<AttributeValue>,
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(default = BColor::Default.into(), into)] color: MaybeSignal<BColor>,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(default = BState::Default.into(), into)] state: MaybeSignal<BState>,
-    #[prop(optional, into)] is_dark: MaybeSignal<bool>,
-    #[prop(optional, into)] is_fullwidth: MaybeSignal<bool>,
-    #[prop(optional, into)] is_inverted: MaybeSignal<bool>,
-    #[prop(optional, into)] is_light: MaybeSignal<bool>,
-    #[prop(optional, into)] is_outlined: MaybeSignal<bool>,
-    #[prop(optional, into)] is_responsive: MaybeSignal<bool>,
-    #[prop(optional, into)] is_rounded: MaybeSignal<bool>,
-    #[prop(optional, into)] title: Option<TextProp>,
+    #[prop(default = BColor::Default.into(), into)] color: MaybeProp<BColor>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(default = BState::Default.into(), into)] state: MaybeProp<BState>,
+    #[prop(optional, into)] is_dark: MaybeProp<bool>,
+    #[prop(optional, into)] is_fullwidth: MaybeProp<bool>,
+    #[prop(optional, into)] is_inverted: MaybeProp<bool>,
+    #[prop(optional, into)] is_light: MaybeProp<bool>,
+    #[prop(optional, into)] is_outlined: MaybeProp<bool>,
+    #[prop(optional, into)] is_responsive: MaybeProp<bool>,
+    #[prop(optional, into)] is_rounded: MaybeProp<bool>,
+    #[prop(optional, into)] title: MaybeProp<TextProp>,
 ) -> impl IntoView {
     let button_class_list = move || {
         get_button_class_list(
@@ -144,8 +144,8 @@ pub fn BButton(
 pub fn BButtons(
     children: Children,
     #[prop(optional, into)] class: TextProp,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(optional, into)] has_addons: MaybeSignal<bool>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(optional, into)] has_addons: MaybeProp<bool>,
 ) -> impl IntoView {
     let buttons_class_list = move || {
         let mut class_list = "buttons".to_owned();

@@ -42,12 +42,12 @@ fn VisibilityIcon(is_visible: RwSignal<bool>) -> impl IntoView {
 #[component]
 pub fn BPasswordField(
     #[prop(optional)] node_ref: NodeRef<leptos::html::Input>,
-    #[prop(optional, into)] error: MaybeSignal<Option<String>>,
+    #[prop(optional, into)] error: MaybeProp<Option<String>>,
     #[prop(optional)] id: Option<&'static str>,
     #[prop(optional)] label: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
     #[prop(optional)] placeholder: Option<&'static str>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(optional, into)] on_change: Option<EventFn>,
     #[prop(optional, into)] on_input: Option<EventFn>,
 ) -> impl IntoView {

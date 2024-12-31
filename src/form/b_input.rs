@@ -11,7 +11,7 @@ pub fn BInput(
     #[prop(default = "text")] input_type: &'static str,
     #[prop(optional)] name: Option<&'static str>,
     #[prop(optional)] placeholder: Option<&'static str>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(optional, into)] on_change: Option<EventFn>,
     #[prop(optional, into)] on_input: Option<EventFn>,
     #[prop(attrs, optional)] attributes: Vec<(&'static str, Attribute)>,

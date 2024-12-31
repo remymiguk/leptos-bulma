@@ -6,7 +6,7 @@ pub fn BTextarea(
     #[prop(optional)] id: Option<&'static str>,
     #[prop(optional)] name: Option<&'static str>,
     #[prop(optional)] placeholder: Option<&'static str>,
-    #[prop(optional, into)] value: MaybeSignal<String>,
+    #[prop(optional, into)] value: MaybeProp<String>,
     #[prop(attrs, optional)] attributes: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView {
     let mut b_textarea = view! {

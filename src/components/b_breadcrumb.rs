@@ -6,11 +6,11 @@ use crate::enums::{BAlignment, BBreadcrumbSeparator, BSize};
 pub fn BBreadcrumb(
     children: Children,
     #[prop(optional, into)] class: AttributeValue,
-    #[prop(default = BAlignment::Default.into(), into)] alignment: MaybeSignal<BAlignment>,
-    #[prop(default = BBreadcrumbSeparator::Default.into(), into)] separator: MaybeSignal<
+    #[prop(default = BAlignment::Default.into(), into)] alignment: MaybeProp<BAlignment>,
+    #[prop(default = BBreadcrumbSeparator::Default.into(), into)] separator: MaybeProp<
         BBreadcrumbSeparator,
     >,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
 ) -> impl IntoView {
     let breadcrumb_class_list = move || {
         let mut class_list = "breadcrumb".to_owned();
@@ -42,8 +42,8 @@ pub fn BBreadcrumb(
 #[component]
 pub fn BBreadcrumbItem(
     children: Children,
-    #[prop(optional, into)] is_active: MaybeSignal<bool>,
-    #[prop(optional, into)] href: Option<TextProp>,
+    #[prop(optional, into)] is_active: MaybeProp<bool>,
+    #[prop(optional, into)] href: MaybeProp<TextProp>,
 ) -> impl IntoView {
     view! {
         <li class:is-active=is_active>

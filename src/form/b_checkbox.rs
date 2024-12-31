@@ -10,8 +10,8 @@ pub fn BCheckbox(
     #[prop(optional, into)] id: Option<&'static str>,
     label: &'static str,
     #[prop(optional, into)] name: Option<&'static str>,
-    #[prop(default = "true".into(), into)] value: MaybeSignal<String>,
-    #[prop(optional, into)] is_checked: MaybeSignal<bool>,
+    #[prop(default = "true".into(), into)] value: MaybeProp<String>,
+    #[prop(optional, into)] is_checked: MaybeProp<bool>,
     #[prop(optional, into)] on_change: Option<EventFn>,
     #[prop(attrs, optional)] attributes: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView {

@@ -22,9 +22,9 @@ fn get_icon_class_list(class: Oco<'static, str>, size: BSize, is_scaled: bool) -
 #[component]
 pub fn BIcon(
     #[prop(optional, into)] class: TextProp,
-    #[prop(into)] icon: MaybeSignal<icondata_core::Icon>,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(optional, into)] is_scaled: MaybeSignal<bool>,
+    #[prop(into)] icon: MaybeProp<icondata_core::Icon>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(optional, into)] is_scaled: MaybeProp<bool>,
 ) -> impl IntoView {
     use leptos_icons::Icon;
 
@@ -41,8 +41,8 @@ pub fn BIcon(
 #[component]
 pub fn BIcon(
     #[prop(optional, into)] class: TextProp,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(optional, into)] is_scaled: MaybeSignal<bool>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(optional, into)] is_scaled: MaybeProp<bool>,
     children: Children,
 ) -> impl IntoView {
     let icon_class_list = move || get_icon_class_list(class.get(), size.get(), is_scaled.get());
@@ -56,9 +56,9 @@ pub fn BIconText<F, IV>(
     #[prop(optional, into)] class: TextProp,
     #[prop(optional, into)] icon_class: TextProp,
     #[prop(optional, into)] text_class: TextProp,
-    #[prop(into)] icon: MaybeSignal<icondata_core::Icon>,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(optional, into)] is_scaled: MaybeSignal<bool>,
+    #[prop(into)] icon: MaybeProp<icondata_core::Icon>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(optional, into)] is_scaled: MaybeProp<bool>,
     text: F,
 ) -> impl IntoView
 where
@@ -79,8 +79,8 @@ pub fn BIconText<F, IV>(
     #[prop(optional, into)] class: TextProp,
     #[prop(optional, into)] icon_class: TextProp,
     #[prop(optional, into)] text_class: TextProp,
-    #[prop(default = BSize::Default.into(), into)] size: MaybeSignal<BSize>,
-    #[prop(optional, into)] is_scaled: MaybeSignal<bool>,
+    #[prop(default = BSize::Default.into(), into)] size: MaybeProp<BSize>,
+    #[prop(optional, into)] is_scaled: MaybeProp<bool>,
     text: F,
     children: Children,
 ) -> impl IntoView
