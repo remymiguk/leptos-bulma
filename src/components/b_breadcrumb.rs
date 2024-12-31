@@ -5,7 +5,7 @@ use crate::enums::{BAlignment, BBreadcrumbSeparator, BSize};
 #[component]
 pub fn BBreadcrumb(
     children: Children,
-    #[prop(optional, into)] class: TextProp,
+    #[prop(optional, into)] class: AttributeValue,
     #[prop(default = BAlignment::Default.into(), into)] alignment: MaybeSignal<BAlignment>,
     #[prop(default = BBreadcrumbSeparator::Default.into(), into)] separator: MaybeSignal<
         BBreadcrumbSeparator,
